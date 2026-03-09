@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S DEPORTIVAS | Catálogo Oficial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo-marca" onclick="showSection('inicio')">S DEPORTIVAS</div>
+    <div class="menu-links">
+        <a href="#" onclick="showSection('inicio')">Inicio</a>
+        <a href="#" onclick="showSection('catalogo')">Catálogo</a>
+        <a href="#" onclick="showSection('pedidos')">Hacer Pedido</a>
+    </div>
+</nav>
+
+<div id="inicio" class="section active">
+    <div class="hero-card">
+        <h1>S DEPORTIVAS</h1>
+        <p>Expertos en uniformes de fútbol premium.</p>
+        <button class="btn-main" onclick="showSection('catalogo')">Ver Catálogo Completo</button>
+    </div>
+</div>
+
+<div id="catalogo" class="section">
+    <h1>Nuestro Catálogo</h1>
+
+    <h2 class="categoria-titulo">🌎 Selecciones Nacionales</h2>
+    <div class="grid-catalogo">
+        <div class="card-uniforme">
+            <img src="https://via.placeholder.com/300x400?text=Colombia" alt="Colombia">
+            <h3>Colombia Local</h3>
+            <p>$55.000 COP</p>
+            <button class="btn-pedir" onclick="seleccionarYPedir('Colombia Local')">Pedir este</button>
+        </div>
+        <div class="card-uniforme">
+            <img src="https://via.placeholder.com/300x400?text=Argentina" alt="Argentina">
+            <h3>Argentina Local</h3>
+            <p>$55.000 COP</p>
+            <button class="btn-pedir" onclick="seleccionarYPedir('Argentina Local')">Pedir este</button>
+        </div>
+    </div>
+
+    <h2 class="categoria-titulo">🇪🇺 Equipos de Europa</h2>
+    <div class="grid-catalogo">
+        <div class="card-uniforme">
+            <img src="https://via.placeholder.com/300x400?text=Real+Madrid" alt="Madrid">
+            <h3>Real Madrid</h3>
+            <p>$50.000 COP</p>
+            <button class="btn-pedir" onclick="seleccionarYPedir('Real Madrid')">Pedir este</button>
+        </div>
+        <div class="card-uniforme">
+            <img src="https://via.placeholder.com/300x400?text=Barcelona" alt="Barca">
+            <h3>FC Barcelona</h3>
+            <p>$50.000 COP</p>
+            <button class="btn-pedir" onclick="seleccionarYPedir('FC Barcelona')">Pedir este</button>
+        </div>
+    </div>
+
+    <h2 class="categoria-titulo">🏆 Equipos de América</h2>
+    <div class="grid-catalogo">
+        <div class="card-uniforme">
+            <img src="https://via.placeholder.com/300x400?text=Nacional" alt="Nacional">
+            <h3>Atlético Nacional</h3>
+            <p>$48.000 COP</p>
+            <button class="btn-pedir" onclick="seleccionarYPedir('Atlético Nacional')">Pedir este</button>
+        </div>
+    </div>
+
+    <h2 class="categoria-titulo">🎨 Diseños Personalizados</h2>
+    <div class="grid-catalogo">
+        <div class="card-uniforme">
+            <img src="https://via.placeholder.com/300x400?text=Tu+Idea" alt="Personalizado">
+            <h3>Crea tu propio diseño</h3>
+            <p>Precio a convenir</p>
+            <button class="btn-pedir" onclick="seleccionarYPedir('Diseño Personalizado')">Pedir este</button>
+        </div>
+    </div>
+</div>
+
+<div id="pedidos" class="section">
+    <div class="card-form">
+        <h2>Detalles del Pedido</h2>
+        <div class="datos-principales">
+            <div class="input-group">
+                <label><b>Referencia del Uniforme:</b></label>
+                <input type="text" id="refGeneral" placeholder="Ej: Colombia 2024">
+            </div>
+            <div class="input-group">
+                <label><b>Logo/Imagen:</b></label>
+                <input type="file" id="fotoGeneral">
+            </div>
+        </div>
+
+        <h3>Lista de Jugadores</h3>
+        <div class="tabla-contenedor">
+            <table id="tablaEquipos">
+                <thead>
+                    <tr>
+                        <th>Nombre / Estampado</th>
+                        <th>Número</th>
+                        <th>Talla</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="nom" placeholder="SANTI"></td>
+                        <td><input type="number" class="num" placeholder="10"></td>
+                        <td>
+                            <select class="tal">
+                                <option>S</option><option>M</option><option>L</option><option>XL</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="btn-add" onclick="addRow()">+ Agregar Jugador</button>
+        <button class="btn-whatsapp" onclick="enviarWhatsApp()">Enviar Pedido a WhatsApp</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+:root {
+    --verde-wa: #25d366;
+    --oscuro: #111;
+    --blanco: #ffffff;
+    --gris-fondo: #f4f4f4;
+}
+
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: var(--gris-fondo); color: #333; }
+
+/* Navegación */
+nav { background: var(--oscuro); padding: 15px 20px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; }
+.logo-marca { color: var(--blanco); font-weight: bold; font-size: 1.4rem; cursor: pointer; margin-right: auto; text-transform: uppercase; }
+.menu-links a { color: var(--blanco); text-decoration: none; font-weight: bold; margin-left: 20px; font-size: 0.9rem; }
+
+/* Secciones */
+.section { padding: 40px 20px; max-width: 1100px; margin: auto; display: none; }
+.active { display: block; }
+
+/* Inicio */
+.hero-card { background: white; padding: 60px; text-align: center; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.btn-main { background: var(--oscuro); color: white; border: none; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+/* Catálogo */
+.categoria-titulo { background: var(--oscuro); color: white; padding: 12px 20px; border-radius: 5px; margin-top: 40px; display: inline-block; font-size: 1.1rem; }
+.grid-catalogo { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 20px; }
+.card-uniforme { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); text-align: center; padding-bottom: 20px; transition: 0.3s; }
+.card-uniforme img { width: 100%; height: 300px; object-fit: cover; }
+.card-uniforme h3 { margin: 15px 0 5px; font-size: 1.1rem; }
+.card-uniforme p { color: var(--verde-wa); font-weight: bold; margin-bottom: 15px; }
+.btn-pedir { background: #333; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; }
+
+/* Pedidos */
+.card-form { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.datos-principales { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; background: #f9f9f9; padding: 20px; border-radius: 10px; }
+.input-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+input, select { width: 90%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th, td { border: 1px solid #eee; padding: 15px; text-align: center; }
+th { background: #f4f4f4; font-size: 0.9rem; }
+
+.btn-add { background: #666; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 15px; }
+.btn-whatsapp { background: var(--verde-wa); color: white; border: none; padding: 18px; width: 100%; font-size: 1.2rem; cursor: pointer; margin-top: 30px; border-radius: 10px; font-weight: bold; }
